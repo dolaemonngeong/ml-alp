@@ -56,7 +56,7 @@
     <form class="row g-3" action="">
       <div class="col-md-6">
         <label for="inputGender" class="form-label">Gender</label>
-        <select id="inputGender" class="form-select">
+        <select class="form-select" id="Gender" name="Gender">
           <option selected>Choose...</option>
           <option value="1">Male</option>
           <option value="2">Female</option>
@@ -68,7 +68,7 @@
       </div>
       <div class="col-md-6">
         <label for="inputOccupation" class="form-label">Occupation</label>
-        <select id="inputOccupation" class="form-select">
+        <select class="form-select" id="Occupation" name="Occupation">
           <option selected>Choose...</option>
           <option value="1">Software Engineer</option>
           <option value="2">Doctor</option>
@@ -86,23 +86,23 @@
       </div>
       <div class="col-md-6">
         <label for="inputDuration" class="form-label">Sleep Duration</label>
-        <input type="number" class="form-control" id="inputDuration">
+        <input type="number" class="form-control" id="Sleep Duration" name="Sleep Duration">
       </div>
       <div class="col-md-6">
         <label for="inputQuality" class="form-label">Sleep Quality (1 - 10, subjective)</label>
-        <input type="number" class="form-control" id="inputQuality">
+        <input type="number" step="any" class="form-control" id="Quality of Sleep" name="Quality of Sleep">
       </div>
       <div class="col-md-6">
         <label for="inputActivity" class="form-label">Physical Activity Level (minutes/day)</label>
-        <input type="number" class="form-control" id="inputActivity">
+        <input type="number" class="form-control" id="Physical Activity Level" name="Physical Activity Level">
       </div>
       <div class="col-md-6">
         <label for="inputStress" class="form-label">Stress Level (1 - 10, subjective)</label>
-        <input type="number" class="form-control" id="inputStress">
+        <input type="number" class="form-control" id="Stress Level" name="Stress Level">
       </div>
       <div class="col-md-6">
         <label for="inputBmi" class="form-label">BMI Category</label>
-        <select id="inputBmi" class="form-select">
+        <select class="form-select" id="BMI Category" name="BMI Category">
           <option selected>Choose...</option>
           <option value="1">Overweight</option>
           <option value="2">Normal</option>
@@ -111,20 +111,30 @@
         </select>
       </div>
       <div class="col-md-6">
+        <label for="inputBPCategory" class="form-label">bp_category</label>
+        <select class="form-select" id="bp_category" name="bp_category">
+          <option selected>Choose...</option>
+          <!-- <option value="1">low</option> -->
+          <option value="3">normal</option>
+          <option value="1">slightly raised</option>
+          <option value="2">high</option>
+        </select>
+      </div>
+      <!-- <div class="col-md-6">
         <label for="inputSystolic" class="form-label">Systolic Blood Pressure (the group of number before slash ( / ) symbol)</label>
-        <input type="number" class="form-control" id="inputSystolic">
+        <input type="number" class="form-control" id="Systolic" name="Systolic">
       </div>
       <div class="col-md-6">
-        <label for="inputDiastolic" class="form-label">Systolic Blood Pressure (the group of number after slash ( / ) symbol)</label>
-        <input type="number" class="form-control" id="inputDiastolic">
-      </div>
+        <label for="inputDiastolic" class="form-label">Diastolic Blood Pressure (the group of number after slash ( / ) symbol)</label>
+        <input type="number" class="form-control" id="Diastolic" name="Diastolic">
+      </div> -->
       <div class="col-md-6">
         <label for="inputHeart" class="form-label">Heart Rate (bpm)</label>
-        <input type="number" class="form-control" id="inputHeart">
+        <input type="number" class="form-control" id="Heart Rate" name="Heart Rate">
       </div>
       <div class="col-md-6">
         <label for="inputSteps" class="form-label">Daily Steps</label>
-        <input type="number" class="form-control" id="inputSteps">
+        <input type="number" class="form-control" id="Daily Steps" name="Daily Steps">
       </div>
       <div class="col-12 pt-4 text-center">
         <button type="submit" class="btn btn-outline-primary">Check-Up</button>
@@ -137,10 +147,14 @@
   <div class="container my-5">
     <div class="p-5 text-center bg-body-tertiary rounded-3">
       <h1 class="text-body-emphasis">Your Result : </h1>
-      <p class="lead">
+      <!-- <p class="lead">
         You have no sleeping disorders.
-        <!-- results changes as the analysis changes, use if else -->
-      </p>
+         results changes as the analysis changes, use if else -->
+      <!-- </p> -->
+      <div id ="result">
+        <strong style="color:red">{{result}}</strong>
+     </div>
+       
     </div>
   </div>
   <!-- Result end -->
