@@ -42,5 +42,12 @@ def predict():
         return render_template('index.html', 
                                result = 'You have Insomnia')
 
-app.run(debug=True)
+# app.run(debug=True)
+# if __name__ == "__main__":
+#     from waitress import serve
+#     serve(app, host="0.0.0.0", port=8080)
+
+if __name__ == '__main__':
+    http_server = WSGIServer(("127.0.0.1", 8080), app)
+    http_server.serve_forever()
     

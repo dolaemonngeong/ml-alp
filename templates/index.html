@@ -53,7 +53,7 @@
 
   <!-- Form -->
   <div class="mx-lg-5 my-4 justify-content-center">
-    <form class="row g-3" action="">
+    <form class="row g-3" action="{{url_for('predict')}}" method ="POST">
       <div class="col-md-6">
         <label for="inputGender" class="form-label">Gender</label>
         <select class="form-select" id="Gender" name="Gender">
@@ -64,7 +64,7 @@
       </div>
       <div class="col-md-6">
         <label for="inputAge" class="form-label">Age</label>
-        <input type="number" class="form-control" id="inputAge">
+        <input type="number" class="form-control" id="Age" name="Age">
       </div>
       <div class="col-md-6">
         <label for="inputOccupation" class="form-label">Occupation</label>
@@ -90,7 +90,7 @@
       </div>
       <div class="col-md-6">
         <label for="inputQuality" class="form-label">Sleep Quality (1 - 10, subjective)</label>
-        <input type="number" step="any" class="form-control" id="Quality of Sleep" name="Quality of Sleep">
+        <input type="number"  class="form-control" id="Quality of Sleep" name="Quality of Sleep">
       </div>
       <div class="col-md-6">
         <label for="inputActivity" class="form-label">Physical Activity Level (minutes/day)</label>
@@ -110,16 +110,6 @@
           <option value="4">Normal Weight</option>
         </select>
       </div>
-      <div class="col-md-6">
-        <label for="inputBPCategory" class="form-label">bp_category</label>
-        <select class="form-select" id="bp_category" name="bp_category">
-          <option selected>Choose...</option>
-          <!-- <option value="1">low</option> -->
-          <option value="3">normal</option>
-          <option value="1">slightly raised</option>
-          <option value="2">high</option>
-        </select>
-      </div>
       <!-- <div class="col-md-6">
         <label for="inputSystolic" class="form-label">Systolic Blood Pressure (the group of number before slash ( / ) symbol)</label>
         <input type="number" class="form-control" id="Systolic" name="Systolic">
@@ -136,9 +126,21 @@
         <label for="inputSteps" class="form-label">Daily Steps</label>
         <input type="number" class="form-control" id="Daily Steps" name="Daily Steps">
       </div>
+      <div class="col-md-6">
+        <label for="inputBPCategory" class="form-label">bp_category</label>
+        <select class="form-select" id="bp_category" name="bp_category">
+          <option selected>Choose...</option>
+          <!-- <option value="1">low</option> -->
+          <option value="3">normal</option>
+          <option value="1">slightly raised</option>
+          <option value="2">high</option>
+        </select>
+      </div>
       <div class="col-12 pt-4 text-center">
         <button type="submit" class="btn btn-outline-primary">Check-Up</button>
       </div>
+    </div>
+    
     </form>
   </div>
   <!-- Form end -->
