@@ -58,8 +58,8 @@
         <label for="inputGender" class="form-label">Gender</label>
         <select class="form-select" id="Gender" name="Gender">
           <option selected>Choose...</option>
-          <option value="1">Male</option>
-          <option value="2">Female</option>
+          <option value="0">Male</option>
+          <option value="1">Female</option>
         </select>
       </div>
       <div class="col-md-6">
@@ -70,17 +70,17 @@
         <label for="inputOccupation" class="form-label">Occupation</label>
         <select class="form-select" id="Occupation" name="Occupation">
           <option selected>Choose...</option>
-          <option value="1">Software Engineer</option>
-          <option value="2">Doctor</option>
-          <option value="3">Sales Representative</option>
-          <option value="4">Teacher</option>
-          <option value="5">Nurse</option>
-          <option value="6">Engineer</option>
-          <option value="7">Accountant</option>
-          <option value="8">Scientist</option>
-          <option value="9">Lawyer</option>
-          <option value="10">Salesperson</option>
-          <option value="11">Manager</option>
+          <option value="0">Software Engineer</option>
+          <option value="1">Doctor</option>
+          <option value="2">Sales Representative</option>
+          <option value="3">Teacher</option>
+          <option value="4">Nurse</option>
+          <option value="5">Engineer</option>
+          <option value="6">Accountant</option>
+          <option value="7">Scientist</option>
+          <option value="8">Lawyer</option>
+          <option value="9">Salesperson</option>
+          <option value="10">Manager</option>
           <!-- etc -->
         </select>
       </div>
@@ -90,7 +90,7 @@
       </div>
       <div class="col-md-6">
         <label for="inputQuality" class="form-label">Sleep Quality (1 - 10, subjective)</label>
-        <input type="number"  class="form-control" id="Quality of Sleep" name="Quality of Sleep">
+        <input type="number"  class="form-control" id="Quality of Sleep" name="Quality of Sleep" min="1" max="10">
       </div>
       <div class="col-md-6">
         <label for="inputActivity" class="form-label">Physical Activity Level (minutes/day)</label>
@@ -104,10 +104,10 @@
         <label for="inputBmi" class="form-label">BMI Category</label>
         <select class="form-select" id="BMI Category" name="BMI Category">
           <option selected>Choose...</option>
-          <option value="1">Overweight</option>
-          <option value="2">Normal</option>
-          <option value="3">Obese</option>
-          <option value="4">Normal Weight</option>
+          <option value="0">Overweight</option>
+          <option value="1">Normal</option>
+          <option value="2">Obese</option>
+          <option value="3">Normal Weight</option>
         </select>
       </div>
       <!-- <div class="col-md-6">
@@ -131,9 +131,10 @@
         <select class="form-select" id="bp_category" name="bp_category">
           <option selected>Choose...</option>
           <!-- <option value="1">low</option> -->
-          <option value="3">normal</option>
-          <option value="1">slightly raised</option>
-          <option value="2">high</option>
+          <option value="0">low</option>
+          <option value="1">normal</option>
+          <option value="2">slightly raised</option>
+          <option value="3">high</option>
         </select>
       </div>
       <div class="col-12 pt-4 text-center">

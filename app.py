@@ -1,5 +1,4 @@
-from flask import Flask, render_template, Response, request, redirect, url_for
-import subprocess
+from flask import Flask, render_template, Response, request
 import pickle
 import numpy as np
 from gevent.pywsgi import WSGIServer
