@@ -3,7 +3,8 @@ import pickle
 import numpy as np
 from gevent.pywsgi import WSGIServer
 
-# Load ML model
+# source: https://www.analyticsvidhya.com/blog/2020/09/web-application/
+# Load Machine Learning model
 model = pickle.load(open('model.pkl', 'rb')) 
 
 # Create application
@@ -18,10 +19,8 @@ def predict():
     
     # Put all form entries values in a list 
     features = [float(i) for i in request.form.values()]
-    # bp_category = 
-    # features.append()
 
-    # Convert features to array
+    # Convert features variable to array
     array_features = [np.array(features)]
 
     # Predict features
@@ -30,7 +29,7 @@ def predict():
     output = prediction
     
 
-    # Check the output values and retrive the result with html tag based on the value
+    # Check the output values & return the result with html tag based on the value
     if output == 1:
         return render_template('index.html', 
                                result = 'You have no sleeping disorders.')
@@ -42,6 +41,7 @@ def predict():
                                result = 'You have Insomnia')
 
 # app.run(debug=True)
+
 # if __name__ == "__main__":
 #     from waitress import serve
 #     serve(app, host="0.0.0.0", port=8080)
