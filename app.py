@@ -30,13 +30,13 @@ def predict():
     
 
     # Check the output values & return the result with html tag based on the value
-    if output == 1:
+    if output == 0:
         return render_template('index.html', 
                                result = 'You have no sleeping disorders.')
-    elif output == 2:
+    elif output == 1:
         return render_template('index.html', 
                                result = 'You have Sleep Apnea')
-    elif output == 3:
+    elif output == 2:
         return render_template('index.html', 
                                result = 'You have Insomnia')
 
